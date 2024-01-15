@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+div.first-presentation {
+    width: 100vw;
+    height: 911px;
+    background: var() url(../fundoroxo1.jpg);
+    background-size: cover;
+}

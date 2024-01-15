@@ -1,0 +1,424 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor01: #031927;
+    --cor02: #57C4E5;
+    --cor03: #B0A1BA;
+    --cor04: #745C90;
+    --cor05: #0FA3B1;
+    --cor06: #E7EBC5;
+    --cor07: #F3FFE1;
+    --font001: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+body {
+    background-color: var(--cor02);
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    height: 65px;
+    background-color: var(--cor07);
+    color: var(--cor01);
+}
+
+nav {
+    display: flex;
+    margin: auto;
+    max-width: 1200px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 65px;
+    padding-top: 5px;
+}
+
+div#menubar-left {
+    display: inline-block;
+    height: 60px;
+    font-family: var(--font001);
+}
+
+div#menubar-right {
+    padding-top: 6px;
+}
+
+div#menubar-right > span {
+    font-size: 2.2em;
+}
+
+nav h1 {
+    display: inline-block;
+    padding-top: 8px;
+    font-size: 1.8em;
+}
+
+ul {
+    font-family: var(--font001);
+    list-style-type: none;
+}
+
+li.menubar {
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 15px 15px 0px 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor01);
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+div#menubar-left a:hover, div#menubar-right a:hover {
+    text-decoration: none;
+}
+
+/* PRIMEIRA DIV */
+
+main > h1 {
+    font-family: var(--font001);
+    background-color: var(--cor04);
+    color: var(--cor01);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    font-size: 3.4em;
+}
+
+div.first-presentation {
+    height: 845.5px;
+    background-color: var(--cor04);
+    font-family: var(--font001);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.text-first-presentation {
+    background-color: var(--cor03);
+    font-size: 1.3em;
+    text-align: justify;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-right: 50px;
+    flex-basis: 2;
+}
+
+div.images-first-presentation {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    max-width: 750px;
+    margin-left: 50px;
+}
+
+div.images-first-presentation div.images-items {
+    background: purple url(../quadrado.jpg) center center/cover no-repeat;
+    width: 250px;
+    height: 250px;
+    border: 2px solid var(--cor03);
+    margin: 0px 5px 5px 0px;
+}
+
+div.images-first-presentation div.images-items:nth-child(2), div.images-first-presentation div.images-items:nth-child(4) {
+    margin-right: 0px;
+}
+
+@media screen and (min-width:671px) and (max-width: 1450px) {
+    div.first-presentation {
+        flex-direction: column;
+        height: 1000px;
+    }
+
+    div.text-first-presentation {
+        margin: 0px 8px;
+    }
+
+    div.images-first-presentation {
+        margin: 0px;
+    }
+}
+
+@media screen and (min-width: 341px) and (max-width: 670px) {
+    div.first-presentation {
+        flex-direction: column;
+        height: 1450px;
+    }
+    div.text-first-presentation {
+        max-width: 400px;
+        margin: 0px 5px;
+        margin-top: -50px;
+    }
+    div.images-first-presentation {
+        margin: 0px;
+        max-width: 450px;
+    }
+    div.images-first-presentation div.images-items {
+        height: 160px;
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    div.first-presentation {
+        flex-direction: column;
+        height: 1450px;
+    }
+    div.text-first-presentation {
+        max-width: 400px;
+        margin: 0px 5px;
+        margin-top: -50px;
+    }
+    div.images-first-presentation {
+        margin: 0px;
+        max-width: 450px;
+    }
+    div.images-first-presentation div.images-items {
+        height: 130px;
+        width: 130px;
+    }
+}
+
+/* SEGUNDA DIV */
+
+.container {
+    background-color: var(--cor02);
+    color: white;
+    font-family: var(--font001);
+
+    margin: auto;
+    border: 1px solid black;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container > div {
+    flex-grow: 1;
+    flex-basis: 0;
+    background-color: white;
+}
+
+.pessoa1, .pessoa2, .pessoa3 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: end;
+}
+
+.pessoa1 {
+    background-image: url(../imagens/pexels-luizclas-1848565.jpg);
+}
+
+.pessoa2 {
+    background-image: url(../imagens/pexels-francisco-rivera-2853507.jpg);
+}
+
+.pessoa3 {
+    background-image: url(../imagens/pexels-christina-morillo-1181424.jpg);
+}
+
+.item {
+    transition: all 300ms ease-out;
+    cursor: pointer;
+}
+
+.item:hover {
+    flex-grow: 2;
+}
+
+.pessoa1:hover #texto1, .pessoa2:hover #texto2, .pessoa3:hover #texto3 {
+    display: block;
+    font-size: 1.3em;
+    max-width: 550px;
+}
+
+.pessoa1:hover {
+    background-image: url(../imagens/editedpessoa1.jpg);
+}
+
+.pessoa2:hover {
+    background-image: url(../imagens/editedpessoa2.jpg);
+}
+.pessoa3:hover {
+    background-image: url(../imagens/editedpessoa3.jpg);
+}
+
+.texto {
+    text-align: justify;
+    padding: 20px;
+}
+
+.texto h3 {
+    font-size: 2.5em;
+}
+
+.texto p {
+    display: none;
+}
+
+div.third-presentation {
+    background-color: var(--cor04);
+    height: 805.5px;
+    font-family: var(--font001);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.left-third-presentation {
+    background-color: #B0A1BA;
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.3em;
+    flex-basis: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.left-third-presentation p {
+    text-align: justify;
+}
+
+div.buttons-left-third-presentation {
+    margin-top: 20px;
+}
+
+div.buttons-left-third-presentation img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--cor04);
+}
+
+div.buttons-left-third-presentation img:hover {
+    height: 110px;
+    width: 110px;
+    transition: all 300ms ease-out;
+}
+
+div.right-third-presentation {
+    width: 30%;
+    height: 70%;
+}
+
+div.right-third-presentation iframe {
+    height: 98%;
+    width: 100%;
+}
+
+@media screen and (max-width: 1400px) {
+    div.third-presentation {
+        flex-direction: column;
+        height: 1000px;
+        align-items:  space-evenly;
+    }
+
+    div.right-third-presentation {
+        width: 60%;
+        height: 50%;
+    }
+
+    div.left-third-presentation {
+        margin: 0px 8px;
+    }
+
+    div.buttons-left-third-presentation img {
+        margin-right: 10px;
+    }
+
+    div.buttons-left-third-presentation img[src="button3.jpg"] {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.right-third-presentation {
+        width: 80%;
+        height: 40%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    div.left-third-presentation {
+        font-size: 1.1em;
+    }
+    div.buttons-left-third-presentation img {
+        height: 70px;
+        width: 70px;
+    }
+
+    div.buttons-left-third-presentation img:hover {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    div.right-third-presentation {
+        width: 90%;
+        height: 40%;
+    }
+}
+
+footer {
+    width: 100%;
+    font-family: var(--font001);
+    text-align: center;
+    background-color: var(--cor07);
+    padding: 5px;
+    color: var(--cor01);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor05);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor01);
+}
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+
+
+
+@media screen and (max-width: 899px) {
+
+    header {
+        height: 70px;
+    }
+    nav {
+        justify-content: center;
+    }
+
+    ul, span.material-icons {
+    display: none;
+}
+}
